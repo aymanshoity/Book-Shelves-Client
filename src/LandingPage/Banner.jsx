@@ -1,6 +1,6 @@
 
 
-import { Fade } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 const Banner = () => {
@@ -10,11 +10,11 @@ const Banner = () => {
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-[#fefae0ff]">
                     <div className="max-w-xl">
-                        <Fade cascade>
+                        <Slide direction="up" cascade>
                         <h1 className="mb-5 text-5xl font-bold">Book Shelves</h1>
                         <p className="mb-5">Your Gateway to a World of Books..</p>
                         <Link><button className="btn bg-[#90b2ddff] text-[#783d19ff]">Let's Explore</button></Link>
-                        </Fade>
+                        </Slide>
                         
                         
                     </div>

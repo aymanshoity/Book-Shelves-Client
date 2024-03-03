@@ -1,6 +1,8 @@
 import Footer from "../Footer";
 import Banner from "../Banner"
 import AboutUs from "../AboutUs"
+import Review from "../Review";
+import AllCategory from "../AllCategory";
 
 const Home = () => {
     return (
@@ -8,7 +10,8 @@ const Home = () => {
             
             <Banner></Banner>
             <AboutUs></AboutUs>
-            <h1 className="py-40">hello</h1>
+            <AllCategory></AllCategory>
+            <Review></Review>
             <Footer></Footer>
         </div>
     );

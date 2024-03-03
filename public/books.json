@@ -1,0 +1,188 @@
+[
+    {
+      "name": "Murder on the Orient Express",
+      "image": "https://i.ibb.co/wssRNWm/Murder-on-the-Orient-Express.jpg",
+      "authorName": "Agatha Christie",
+      "quantity": 10,
+      "category": "Thriller",
+      "description": " 'Murder on the Orient Express' is a classic detective novel written by Agatha Christie , published on January 1, 1934, by Collins Crime Club in the United Kingdom. The story revolves around renowned Belgian detective Hercule Poirot, who finds himself aboard the luxurious Orient Express. During the journey, a wealthy American businessman is murdered, and Poirot is enlisted to solve the case. As he meticulously unravels the mystery, Poirot discovers a web of intricate relationships and dark secrets among the passengers.  The novel, spanning approximately 274 pages in its initial edition, is celebrated for its clever twists, intriguing characters, and Agatha Christie's mastery in crafting a compelling mystery narrative.",
+      "ratings": 4.5
+    },
+    {
+      "name": "Holes",
+      "image": "https://i.ibb.co/3WbzVnc/Holes.jpg",
+      "authorName": "Louis Sachar",
+      "quantity": 8,
+      "category": "Thriller",
+      "description": "'Holes' by Louis Sachar, released in September 1998 and published by Farrar, Straus and Giroux, is a compelling young adult novel that follows the misadventures of Stanley Yelnats at Camp Green Lake, a juvenile detention center. Falsely accused of stealing, Stanley must endure the harsh discipline of digging holes daily in the dry lakebed as part of his sentence. As he forms bonds with other boys and unravels the mystery behind the digging, the narrative skillfully weaves together humor, mystery, and a touch of the supernatural. The novel, spanning approximately 233 pages, is celebrated for its unique storytelling and thought-provoking themes.",
+      "ratings": 3.5
+    },
+    {
+      "name": "The Girl on the Train",
+      "image": "https://i.ibb.co/n0cNWTj/The-Girl-on-the-Train.jpg",
+      "authorName": "Paula Hawkins",
+      "quantity": 7,
+      "category": "Thriller",
+      "description": "'The Girl on the Train' by Paula Hawkins, published on January 13, 2015, by Riverhead Books, is a gripping psychological thriller that revolves around Rachel Watson. The story unfolds as Rachel, a troubled alcoholic, becomes entangled in a missing person investigation. Commuting on the train daily, she observes a seemingly perfect couple from afar, and when the wife goes missing, Rachel is drawn into the complex web of secrets, deceit, and fractured memories. As the narrative unravels, the novel explores themes of obsession and the unreliability of memory. Spanning approximately 336 pages, this bestseller is known for its suspenseful plot and skillful depiction of psychological tension.",
+      "ratings": 4
+    },
+    {
+      "name": "The Silent Patient",
+      "image": "https://i.ibb.co/nLR05cv/The-Silent-Patient.jpg",
+      "authorName": "Alex Michaelides",
+      "quantity": 12,
+      "category": "Thriller",
+      "description": "'The Silent Patient' by Alex Michaelides is a gripping psychological thriller that explores the mysterious silence of Alicia Berenson, a celebrated painter who suddenly shoots her husband and then stops speaking. Committed to a psychiatric facility, she becomes the subject of fascination for a forensic psychotherapist determined to unravel the truth behind her muteness. As the therapist delves into Alicia's past, dark secrets and unexpected twists emerge, leading to a shocking and mind-bending climax. Published by Celadon Books, 'The Silent Patient' was released on February 5, 2019, and it spans approximately 336 pages",
+      "ratings": 4
+    },
+    {
+      "name": "Dead Connection",
+      "image": "https://i.ibb.co/WkLfR3z/Dead-Connection.jpg",
+      "authorName": "Alafair Burke",
+      "quantity": 9,
+      "category": "Thriller",
+      "description": "'Dead Connection' by Alafair Burke is a riveting crime novel that follows Detective Ellie Hatcher as she investigates a series of murders connected through an online dating site. As she navigates the dark corners of internet romance and modern relationships, Ellie must untangle a complex web of secrets and deception to catch the killer. Published by Henry Holt and Co., 'Dead Connection' was first released on July 3, 2007, and it comprises approximately 304 pages, delivering a compelling mix of suspense, romance, and police procedural elements.",
+      "ratings": 4.5
+    },
+   
+    {
+      "name": "Long Walk to Freedom: The Autobiography of Nelson Mandela",
+      "image": "https://i.ibb.co/NLfrd77/Long-Walk-to-Freedom.jpg",
+      "authorName": "Nelson Mandela",
+      "quantity": 15,
+      "category": "History",
+      "description": "'Long Walk to Freedom: The Autobiography of Nelson Mandela' is a powerful memoir by the iconic South African leader Nelson Mandela. Released on October 1, 1994, and published by Little, Brown and Company, the book chronicles Mandela's extraordinary life, from his early years and political activism to his long imprisonment under apartheid and eventual role in leading South Africa to freedom and reconciliation. The autobiography, spanning approximately 656 pages, provides a firsthand account of Mandela's resilience, vision, and commitment to justice, making it an inspiring and essential read for those seeking insights into the struggle for human rights and equality.",
+      "ratings": 4.7
+    },
+    {
+        "name": "Salt",
+        "image": "https://i.ibb.co/NrCyHSH/Salt.jpg",
+        "authorName": "Mark Kurlansky",
+        "quantity": 8,
+        "category": "History",
+        "description": "'Salt: A World History' by Mark Kurlansky, first published in 2002 by Penguin Books, is a fascinating exploration of the impact of salt on human civilization. Released on January 28, 2002, this historical narrative takes readers on a journey through time and across continents, revealing salt's profound influence on economics, trade, and cultural practices. Kurlansky skillfully weaves together tales of wars, revolutions, and technological advancements, demonstrating how this humble mineral has shaped societies and played a pivotal role in the development of human civilization. With a page length of approximately 496 pages, 'Salt' is a captivating and informative narrative that brings a common commodity into sharp focus as a lens through which to view the complexities of world history.",
+        "ratings": 4
+    },
+    {
+        "name": "Cod: A Biography of the Fish that Changed the World",
+        "image": "https://i.ibb.co/5sqbsJF/Cod.jpg",
+        "authorName": "Mark Kurlansky",
+        "quantity": 9,
+        "category": "History",
+        "description": "'Cod: A Biography of the Fish that Changed the World' by Mark Kurlansky, first published in 1997 by Walker and Company, is a captivating exploration of the profound impact of cod on human history and civilization. The book takes readers on a journey through centuries, detailing how this seemingly humble fish played a crucial role in shaping economies, influencing exploration and settlement, and even sparking wars. With a meticulous blend of history, ecology, and cultural anecdotes, Kurlansky crafts a compelling narrative that illustrates the interconnectedness of cod with the rise and fall of nations. The book, spanning approximately 294 pages, offers a unique perspective on the intricate relationships between humanity and the natural world.",
+        "ratings": 4.5
+    },
+    {
+        "name": "Red Scarf Girl: A Memoir of the Cultural Revolution",
+        "image": "https://i.ibb.co/2qpFDNy/Red-Scarf-Girl.jpg",
+        "authorName": "Ji-li Jiang",
+        "quantity": 15,
+        "category": "History",
+        "description": "'Red Scarf Girl: A Memoir of the Cultural Revolution' by Ji-li Jiang serves as an engaging and educational account of a tumultuous period in Chinese history. Published by HarperCollins on September 2, 1997, this memoir recounts the author's experiences growing up during China's Cultural Revolution. Through the lens of Ji-li Jiang's personal journey, readers gain insights into the societal upheavals, political fervor, and personal struggles that defined this era. With a page length of around 304 pages, the book offers a poignant narrative that not only details the impact of political movements on individual lives but also serves as a valuable historical document for students and readers interested in understanding the complexities of revolutionary China.",
+        "ratings": 4.5
+    },
+    {
+        "name": "Live from Death Row",
+        "image": "https://i.ibb.co/bR1r2xp/Live-from-Death-Row.jpg",
+        "authorName": "Mumia Abu-Jamal",
+        "quantity": 10,
+        "category": "History",
+        "description": "'Live from Death Row' by Mumia Abu-Jamal, published in 1995 by Addison-Wesley, is a powerful and thought-provoking collection of essays that addresses issues of justice, racism, and the death penalty. Released during Abu-Jamal's incarceration on death row, the book provides a firsthand account of his experiences and activism. With a page length of approximately 208 pages, Abu-Jamal reflects on his own case, the criminal justice system, and broader societal injustices. The book offers a unique perspective on the complexities of the legal system and serves as a rallying call for social and political change. Please note that Mumia Abu-Jamal's case and writings are controversial, and opinions on the book may vary.",
+        "ratings": 4.2
+    },
+    
+   
+    {
+      "name": "Nine Stories",
+      "image": "https://i.ibb.co/cNTKqLk/Nine-Stories.jpg",
+      "authorName": "J.D. Salinger ",
+      "quantity": 18,
+      "category": "Literature & Fiction",
+      "description": "'Nine Stories' by J.D. Salinger is a collection of short stories that showcases the author's keen insight into human nature and his distinctive narrative style. First published on April 6, 1953, by Little, Brown and Company, the book includes tales that delve into the complexities of human relationships, the search for meaning, and the challenges of navigating the modern world. With a page length of around 198 pages in the original edition, 'Nine Stories' remains a classic work of American literature, offering readers a glimpse into Salinger's ability to capture the nuances of the human experience in concise yet profound storytelling",
+      "ratings": 4.6
+    },
+    {
+      "name": "A Tale of Two Cities",
+      "image": "https://i.ibb.co/nB1h77W/A-Tale-of-Two-Cities.jpg",
+      "authorName": "Charles Dickens",
+      "quantity": 15,
+      "category": "Literature & Fiction",
+      "description": "'A Tale of Two Cities' by Charles Dickens, first published in 1859, is a historical novel set against the tumultuous backdrop of the French Revolution. Released by Chapman & Hall, the novel intertwines the lives of several characters in London and Paris, exploring themes of resurrection, sacrifice, and the impact of social and political unrest. Dickens masterfully weaves a narrative that captures the stark contrasts between the two cities and vividly portrays the struggles and triumphs of its characters. With a page length that varies by edition, the novel remains a timeless classic, celebrated for its compelling characters and profound exploration of human resilience in the face of sweeping historical change.",
+      "ratings": 4
+    },
+    {
+      "name": "The Great Gatsby",
+      "image": "https://i.ibb.co/xYCPgKm/The-Great-Gatsby.jpg",
+      "authorName": "F. Scott Fitzgerald",
+      "quantity": 7,
+      "category": "Literature & Fiction",
+      "description": "'The Great Gatsby' by F. Scott Fitzgerald, published on April 10, 1925, by Charles Scribner's Sons, is a classic American novel that delves into the excesses and disillusionment of the Jazz Age. Set in the summer of 1922, the story unfolds through the eyes of Nick Carraway, a young man drawn into the world of his mysterious and affluent neighbor, Jay Gatsby. Through Gatsby's extravagant parties and his unrequited love for Daisy Buchanan, Fitzgerald explores themes of wealth, social class, and the elusive American Dream. With a page length that typically ranges from 180 to 200 pages, 'The Great Gatsby' is celebrated for its lyrical prose, vivid characters, and poignant commentary on the pursuit of the American Dream during a time of societal upheaval.",
+      "ratings": 3.5
+    },
+    {
+      "name": "The Old Man and the Sea",
+      "image": "https://i.ibb.co/PCGsFrN/The-Old-Man-and-the-Sea.jpg",
+      "authorName": "Ernest Hemingway",
+      "quantity": 10,
+      "category": "Literature & Fiction",
+      "description": "'The Old Man and the Sea' by Ernest Hemingway, first published in 1952 by Charles Scribner's Sons, is a novella that encapsulates the indomitable spirit of human resilience and the elemental struggle between man and nature. Set in the Gulf Stream waters, the story follows Santiago, an aging Cuban fisherman, on his epic battle with a giant marlin. Hemingway's spare and powerful prose captures the solitude of the sea, the tenacity of Santiago, and the profound themes of endurance and existential struggle. With a page length of around 127 pages, this timeless work earned Hemingway the Pulitzer Prize for Fiction and solidified its place as a classic in American literature.",
+      "ratings": 5
+    },
+    {
+      "name": "The Secret Scripture: A Novel",
+      "image": "https://i.ibb.co/k12yg40/The-Secret-Scripture.jpg",
+      "authorName": "Sebastian Barry",
+      "quantity": 12,
+      "category": "Literature & Fiction",
+      "description": "'The Secret Scripture: A Novel' by Sebastian Barry, published in 2008 by Viking Penguin, is a haunting and evocative tale that delves into the complex life of Roseanne McNulty, a woman confined to a mental institution in Ireland. The narrative unfolds through Roseanne's journals, revealing a poignant account of her troubled past, love, and the societal upheavals she witnessed. As her story intersects with the political and cultural landscape of 20th-century Ireland, Barry weaves a rich tapestry of memory, identity, and the impact of historical events. With a page length of approximately 300 pages, 'The Secret Scripture' is a beautifully written exploration of human resilience and the enduring quest for truth and justice.",
+      "ratings": 4.6
+    },
+    
+    {
+      "name": "The Art of Computer Programming: Fundamental Algorithms",
+      "image": "https://i.ibb.co/bHw8Xk1/The-Art-of-Computer-Programming.jpg",
+      "authorName": "Donald Ervin Knuth",
+      "quantity": 7,
+      "category": "Science & Technology",
+      "description": "'The Art of Computer Programming: Fundamental Algorithms, Volume 1' by Donald Ervin Knuth is a seminal work in computer science that delves into the fundamental principles and algorithms crucial to the field. First published in 1968, this groundbreaking book has had a profound impact on the study of algorithms and programming. As the author explores various algorithmic techniques and their mathematical foundations, he provides a comprehensive guide for both aspiring and experienced computer scientists. The book, published by Addison-Wesley, has undergone multiple editions, and the page length varies depending on the edition, with the first edition having around 634 pages. It remains a timeless resource and a cornerstone in the education of computer scientists worldwide.",
+      "ratings": 4
+    },
+    {
+      "name": "Beginning Python: From Novice to Professional",
+      "image": "https://i.ibb.co/jwrfBK2/Beginning-Python.jpg",
+      "authorName": "Magnus Lie Hetland and Fabio Nelli",
+      "quantity": 12,
+      "category": "Science & Technology",
+      "description": "'Beginning Python: From Novice to Professional' by Magnus Lie Hetland and Fabio Nelli is a comprehensive guide designed to take readers from beginner to proficient levels in Python programming. This book, first published on December 13, 2017, by Apress, provides a hands-on approach to learning Python, covering essential concepts, syntax, and practical applications. With a focus on real-world examples and exercises, it equips readers with the skills needed to tackle programming challenges confidently. The page length can vary depending on the edition, but it typically spans around 528 pages, making it a valuable resource for individuals looking to build a strong foundation in Python programming.",
+      "ratings": 4.3
+    },
+    {
+      "name": "Biology",
+      "image": "https://i.ibb.co/YPSvqTg/Biology.jpg",
+      "authorName": "Joseph S. Levine and Kenneth R. Miller",
+      "quantity": 12,
+      "category": "Science & Technology",
+      "description": "'Biology Miller and Levine Hardcover Student Edition 2004' by Joseph S. Levine and Kenneth R. Miller is an influential high school biology textbook that has been widely used for its comprehensive coverage of biological concepts. First published in 2004 by Prentice Hall, this edition is crafted to engage students with clear explanations, vibrant visuals, and interactive learning resources. It covers diverse topics from cellular biology to ecology, providing a solid foundation for students studying biology. The page length can vary based on the specific edition, but it typically contains around 1200 pages, offering a rich and in-depth exploration of the subject matter. This textbook has been praised for its accessibility and effectiveness in conveying complex biological concepts to students.",
+      "ratings": 4.3
+    },
+    
+    {
+      "name": "SolidWorks For Dummies",
+      "image": "https://i.ibb.co/6J3ykhk/Solidworks.jpg",
+      "authorName": "Greg Jankowski and Richard Doyle",
+      "quantity": 12,
+      "category": "Science & Technology",
+      "description": "'SolidWorks For Dummies' by Greg Jankowski and Richard Doyle is a user-friendly guide designed to demystify the complexities of SolidWorks, a popular 3D computer-aided design (CAD) software. Co-authored by experienced SolidWorks professionals, the book provides step-by-step instructions, practical tips, and hands-on exercises to help readers master the software. First published on May 4, 2007, by For Dummies, this guide is tailored for beginners and intermediate users looking to enhance their skills in 3D modeling and design. The page length can vary depending on the edition, but it generally offers a comprehensive yet accessible approach to navigating SolidWorks and creating detailed and accurate 3D models.",
+      "ratings": 4
+    },
+    {
+      "name": "The 'Netter Atlas of Human Anatomy",
+      "image": "https://i.ibb.co/7kDwVfz/Anatomy.jpg",
+      "authorName": "Frank H. Netter",
+      "quantity": 11,
+      "category": "Science & Technology",
+      "description": "The 'Netter Atlas of Human Anatomy' by Frank H. Netter is a renowned medical atlas that offers a visually rich and detailed exploration of human anatomy. First published in 1989 and later updated in subsequent editions, this atlas has become a staple in medical education. Published by Elsevier, the book features meticulously illustrated and labeled images by Dr. Netter, providing a comprehensive and clear understanding of anatomical structures. With its detailed illustrations covering various body systems, this atlas serves as a valuable resource for medical students, healthcare professionals, and anatomists. The page length can vary across editions, but it typically contains several hundred pages, ensuring a thorough and visually immersive exploration of human anatomy.",
+      "ratings": 4
+    }
+  ]
+  

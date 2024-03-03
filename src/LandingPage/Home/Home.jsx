@@ -1,9 +1,15 @@
-
+import Footer from "../Footer";
+import Banner from "../Banner"
+import AboutUs from "../AboutUs"
 
 const Home = () => {
     return (
-        <div className="min-h-screen">
-            <h1>hello</h1>
+        <div className="">
+            
+            <Banner></Banner>
+            <AboutUs></AboutUs>
+            <h1 className="py-40">hello</h1>
+            <Footer></Footer>
         </div>
     );
 };

@@ -1,16 +1,48 @@
-import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Navbar = () => {
+    const navigate = useNavigate('/')
+    const { user, logOut } = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                Swal.fire(`${user.displayName} logged out!!`)
+                navigate('/')
+            })
+            .catch()
+    }
+    const link = <>
+        <NavLink to='/' className={({ isActive }) => (isActive ? 'text-[#fefae0ff] text-lg mr-4' : 'text-[#783d19ff] text-lg mr-4')}>Home</NavLink>
+
+        {
+            !user ? <>
+
+                <NavLink to='/login' className={({ isActive }) => (isActive ? 'text-[#fefae0ff] text-lg mr-4' : 'text-[#783d19ff] text-lg mr-4')}>Login</NavLink>
+            </> : <>
+
+                <NavLink to='/addBook' className={({ isActive }) => (isActive ? 'text-[#fefae0ff] text-lg mr-4' : 'text-[#783d19ff] text-lg mr-4')}>Add Book</NavLink>
+                <NavLink to='/allBooks' className={({ isActive }) => (isActive ? 'text-[#fefae0ff] text-lg mr-4' : 'text-[#783d19ff] text-lg mr-4')}>All Books</NavLink>
+                <NavLink to='/borrowedBooks' className={({ isActive }) => (isActive ? 'text-[#fefae0ff] text-lg mr-4' : 'text-[#783d19ff] text-lg mr-4')}>Borrowed Books</NavLink>
+                <NavLink onClick={handleLogOut} className="text-[#783d19ff] text-lg mr-4">Logout</NavLink>
+
+                <div className="flex flex-row items-center gap-2 border p-2 rounded-lg">
+                    <h1 className="text-[#783d19ff]">{user.displayName}</h1>
+                    <img className="w-[50px] h-[50px] rounded-full" src={user.photoURL} alt="" />
 
 
-    const link=<>
-        <NavLink to='/' className={({isActive})=>(isActive? 'text-amber-900 text-lg mr-4':'text-black text-lg mr-4')}>Home</NavLink>
-        <NavLink to='/addBook' className={({isActive})=>(isActive? 'text-amber-900 text-lg mr-4':'text-black text-lg mr-4')}>Add Book</NavLink>
-        <NavLink to='/allBooks' className={({isActive})=>(isActive? 'text-amber-900 text-lg mr-4':'text-black text-lg mr-4')}>All Books</NavLink>
-        <NavLink to='/borrowedBooks' className={({isActive})=>(isActive? 'text-amber-900 text-lg mr-4':'text-black text-lg mr-4')}>Borrowed Books</NavLink>
-        <NavLink to='/login' className={({isActive})=>(isActive? 'text-amber-900 text-lg mr-4':'text-black text-lg mr-4')}>Login</NavLink>
-    
+                </div>
+
+            </>
+        }
+
+
+
+
+
     </>
     return (
         <div className="navbar bg-[#90b2ddff] bg-opacity-80 fixed z-10">
@@ -29,11 +61,11 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="navbar-end hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 items-center">
                     {link}
                 </ul>
             </div>
-            
+
         </div>
     );
 };

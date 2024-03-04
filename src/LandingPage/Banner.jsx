@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
-        <div className=' '>
+        <div className='py-24 '>
             <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/0F29MGT/image.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-[#fefae0ff]">

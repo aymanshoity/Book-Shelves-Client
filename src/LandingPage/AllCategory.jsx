@@ -11,8 +11,8 @@ const AllCategory = () => {
                     <Slide direction="left">
                         <Zoom>
                             <motion.div
-                                className="card  w-[200px] h-[400px] bg-[#90b2ddff] shadow-xl"
-                                whileHover={{ scale: [null, 1.5, 1.1] }}
+                                className=" w-[200px] h-[450px] bg-[#fefae0ff] shadow-xl"
+                                whileHover={{ scale: [null, 1.2, 1.1] }}
                                 transition={{ duration: 0.8 }}
 
                             >
@@ -32,8 +32,8 @@ const AllCategory = () => {
                     <Slide direction="right">
                         <Zoom>
                             <motion.div
-                                className="card  w-[200px] h-[400px] bg-[#90b2ddff] shadow-xl"
-                                whileHover={{ scale: [null, 1.5, 1.1] }}
+                                className=" w-[200px] h-[450px] bg-[#fefae0ff] shadow-xl"
+                                whileHover={{ scale: [null, 1.2, 1.1] }}
                                 transition={{ duration: 0.8 }}
 
                             >
@@ -55,8 +55,8 @@ const AllCategory = () => {
                     <Slide direction="left">
                         <Zoom>
                             <motion.div
-                                className="card  w-[200px] h-[400px] bg-[#90b2ddff] shadow-xl"
-                                whileHover={{ scale: [null, 1.5, 1.1] }}
+                                className=" w-[200px] h-[450px] bg-[#fefae0ff] shadow-xl"
+                                whileHover={{ scale: [null, 1.2, 1.1] }}
                                 transition={{ duration: 0.8}}
 
                             >
@@ -78,8 +78,8 @@ const AllCategory = () => {
                     <Slide direction="right">
                         <Zoom>
                             <motion.div
-                                className="card  w-[200px] h-[400px] bg-[#90b2ddff] shadow-xl"
-                                whileHover={{ scale: [null, 1.5, 1.1] }}
+                                className=" w-[200px] h-[450px] bg-[#fefae0ff] shadow-xl"
+                                whileHover={{ scale: [null, 1.2, 1.1] }}
                                 transition={{ duration: 0.8 }}
 
                             >
@@ -88,7 +88,7 @@ const AllCategory = () => {
                                     <img className="w-[200px] h-[350px]" src="https://i.ibb.co/bR1r2xp/Live-from-Death-Row.jpg" alt="Shoes" />
 
                                 </figure>
-                                <div className="card-body">
+                                <div className="card-body text-center">
                                     <h2 className="card-title text-center">History</h2>
 
                                 </div>

@@ -10,7 +10,7 @@ import { Slide } from "react-awesome-reveal";
 // import required modules
 import { Pagination } from 'swiper/modules';
 const Review = () => {
-
+    
     return (
         <div className='py-24 mx-auto'>
             <SharedHeading heading={"Client's Reviews"}></SharedHeading>
@@ -25,14 +25,15 @@ const Review = () => {
                         clickable: true,
                     }}
                     modules={[Pagination]}
-                    className="mySwiper bg-[#90b2ddff]  "
+                    className="mySwiper  "
+                    style={{backgroundImage: 'url(https://i.ibb.co/hVbQLDH/pic-16.jpg)',  backgroundRepeat: 'no-repeat',objectFit:"cover", width:"100vw",backgroundSize: '100% 100%'}}
                 >
                     <SwiperSlide>
                         <div className='flex flex-col items-center  w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center bg-[#fefae0ff] text-[#783d19ff] rounded-lg'>
                             <img className='w-[80px] h-[80px] rounded-full' src="https://i.ibb.co/x7x8qQr/t5.jpg" alt="" />
                             <h1 className='font-bold text-xl'>Jane Doe</h1>
                             <h1 className='font-semibold text-sm'> Avid Reader</h1>
-                            <p>Book Shelves has completely transformed my reading experience. The diverse collection caters to all my moods, and the personalized recommendations have introduced me to hidden literary gems. The community aspect makes me feel connected to fellow readers, adding a delightful social touch to my bookish adventures."</p>
+                            <p>Book Shelves has completely transformed my reading experience. The diverse collection caters to all my moods, and the personalized recommendations have introduced me to hidden literary gems. The community aspect makes me feel connected to fellow readers, adding a delightful social touch to my bookish adventures.</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>

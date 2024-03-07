@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import SharedHeading from "../SharedComponents/SharedHeading";
 import { useForm } from "react-hook-form"
 import UseAxiosSecure from "../Hooks/UseAxiosSecure";
@@ -22,74 +22,88 @@ const AddBook = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 axiosSecure.post('/books', data)
-            .then(res => {
-                console.log(res.data)
-                if(res.data.insertedId){
-                    Swal.fire("Added!", "", "success");
-                }
-            })
-                
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.insertedId) {
+                            Swal.fire("Added!", "", "success");
+                            reset()
+                        }
+                    })
+
             } else if (result.isDenied) {
                 Swal.fire("Book is not added", "", "info");
             }
         });
-        
+
 
     }
     return (
-        <div className="py-24">
-            <div>
-                <img className=" lg:w-[1280px] mx-auto rounded-lg h-[600px]" src="../../public/Going to work.gif" alt="" />
-            </div>
-            <SharedHeading heading={'Add a Book'}></SharedHeading>
-            <div>
-                <div className="card shrink-0 lg:w-[1000px] md:w-[600px] w-[250px] mx-auto shadow-2xl bg-[#b99470ff]  ">
-                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center justify-center">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-[#fefae0ff]">Book Image URL</span>
-                                </label>
-                                <input {...register("image", { required: true })} type="url" placeholder="Book Image URL" className="input input-bordered text-[#783d19ff]" required />
-                                {errors.image && <span className="text-[#fefae0ff]">This field is required</span>}
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-[#fefae0ff]">Book Name</span>
-                                </label>
-                                <input {...register("name", { required: true })} type="text" placeholder="Book Name" className="input input-bordered text-[#783d19ff]" required />
-                                {errors.image && <span className="text-[#fefae0ff]">This field is required</span>}
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-[#fefae0ff]">Author Name</span>
-                                </label>
-                                <input {...register("authorName", { required: true })} type="text" placeholder="Author name.." className="input input-bordered text-[#783d19ff]" required />
-                                {errors.authorName && <span className="text-[#fefae0ff]">This field is required</span>}
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-[#fefae0ff]">Quantity</span>
-                                </label>
-                                <input {...register("quantity", { required: true })} type="number" placeholder="Quantity" className="input input-bordered text-[#783d19ff]" required />
-                                {errors.quantity && <span className="text-[#fefae0ff]">This field is required</span>}
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-[#fefae0ff]">Category</span>
-                                </label>
-                                <input {...register("category", { required: true })} type="text" placeholder="Category" className="input input-bordered text-[#783d19ff]" required />
+        <div className="py-28 ">
 
-                                {errors.category && <span className="text-[#fefae0ff]">This field is required</span>}
+            <SharedHeading heading={'Add a Book'}></SharedHeading>
+            <div className="flex lg:flex-row flex-col gap-8 lg:w-[1280px] md:w-[600px] w-[250px] mx-auto">
+                <div className="flex-1">
+                    <img className="border border-[#783d19ff]  mx-auto rounded-lg lg:h-[600px]" src="../../public/Going to work.gif" alt="" />
+                </div>
+                <div className=" flex-1 card shrink-0  md:w-[500px] w-[250px]  shadow-2xl bg-[#b99470ff]  ">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                        <div className="grid grid-cols-1  gap-6 items-center justify-center">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-[#fefae0ff]">Book Image URL</span>
+                                    </label>
+                                    <input {...register("image", { required: true })} type="url" placeholder="Book Image URL" className="input input-bordered text-[#783d19ff]" required />
+                                    {errors.image && <span className="text-[#fefae0ff]">This field is required</span>}
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-[#fefae0ff]">Book Name</span>
+                                    </label>
+                                    <input {...register("name", { required: true })} type="text" placeholder="Book Name" className="input input-bordered text-[#783d19ff]" required />
+                                    {errors.image && <span className="text-[#fefae0ff]">This field is required</span>}
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-[#fefae0ff]">Author Name</span>
+                                    </label>
+                                    <input {...register("authorName", { required: true })} type="text" placeholder="Author name.." className="input input-bordered text-[#783d19ff]" required />
+                                    {errors.authorName && <span className="text-[#fefae0ff]">This field is required</span>}
+                                </div>
+
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-[#fefae0ff]">Category</span>
+                                    </label>
+                                    <select {...register("category", { required: true })} className="input input-bordered text-[#783d19ff]" placeholder="Category">
+                                        <option value="Thriller">Thriller</option>
+                                        <option value="Literature & Fiction">Literature & Fiction</option>
+                                        <option value="Science &Technology">Science &Technology</option>
+                                        <option value="History">History</option>
+                                    </select>
+                                    
+
+                                    {errors.category && <span className="text-[#fefae0ff]">This field is required</span>}
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-[#fefae0ff]">Quantity</span>
+                                    </label>
+                                    <input {...register("quantity", { required: true })} type="number" placeholder="Quantity" className="input input-bordered text-[#783d19ff]" required />
+                                    {errors.quantity && <span className="text-[#fefae0ff]">This field is required</span>}
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-[#fefae0ff]">Ratings</span>
+                                    </label>
+                                    <input {...register("ratings", { required: true, min: 0, max: 5  })} type="number" placeholder="Ratings out of 5" className="input input-bordered text-[#783d19ff]" required />
+                                    {errors.ratings && <span className="text-[#fefae0ff]">This field is required</span>}
+                                    {errors.ratings?.type === "min" && <span className="text-[#fefae0ff]">Choose between 1 to 5</span>}
+                                    {errors.ratings?.type === "max" && <span className="text-[#fefae0ff]">Choose between 1 to 5</span>}
+                                </div>
                             </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-[#fefae0ff]">Ratings</span>
-                                </label>
-                                <input {...register("ratings", { required: true, max: 5 })} type="number" placeholder="Ratings out of 5" className="input input-bordered text-[#783d19ff]" required />
-                                {errors.ratings && <span className="text-[#fefae0ff]">This field is required</span>}
-                                {errors.ratings?.type === "max" && <span className="text-[#fefae0ff]">Choose between 1 to 5</span>}
-                            </div>
+
+
 
 
                         </div>

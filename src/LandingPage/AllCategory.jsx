@@ -4,9 +4,9 @@ import { Slide, Zoom } from "react-awesome-reveal";
 import { motion } from "framer-motion"
 const AllCategory = () => {
     return (
-        <div className="py-24 lg:w-[1280px] mx-auto ">
+        <div className="py-24  ">
             <SharedHeading heading={'All categories'}></SharedHeading>
-            <div className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-6">
+            <div className=" lg:w-[1280px] md:w[600px] w-[250px] mx-auto  grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-6">
                 <Link>
                     <Slide direction="left">
                         <Zoom>

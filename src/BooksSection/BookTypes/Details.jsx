@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-import { useForm } from "react-hook-form"
 import { BiBookReader } from "react-icons/bi";
 import { TfiEmail } from "react-icons/tfi";
 import { BsCalendarDate } from "react-icons/bs";
@@ -21,9 +20,10 @@ const Details = () => {
     }, [axiosSecure, id])
 
     const [openModal, setOpenModal] = useState(false)
-    // console.log(typeof(book.quantity))
-    // console.log(book.quantity,book.quantity-1)
-
+    // console.log(book.quantity-book.quantity)
+    // console.log(book.quantity-book.quantity)
+    console.log(book.quantity,book.quantity-1)
+    const [count,setCount]=useState(book.quantity)
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -39,6 +39,7 @@ const Details = () => {
             bookID:book._id,
             category:book.category,
             name:book.name,
+            image:book.image,
 
         }
         console.log(borrowedBooks)
@@ -56,9 +57,12 @@ const Details = () => {
                 .then(res=>{
                     console.log(res.data)
                     if(res.data.insertedId){
-                        const quantity=book.quantity-1;
+                        const quantity=book.quantity-1
+                        setCount(quantity)
+                        console.log(quantity,count)
+                        
                         const data={
-                            quantity:quantity
+                            quantity:quantity,
                         }
                         axiosSecure.patch(`/books/${id}`,data)
                         .then(res=>{
@@ -97,7 +101,7 @@ const Details = () => {
 
                         <button className=" btn glass text-lg mr-4 bg-[#783d19ff] text-[#faf8ea]">Read</button>
 
-                        <button onClick={() => setOpenModal(true)} className="btn glass text-lg bg-[#783d19ff] text-[#faf8ea] ">Borrow</button>
+                        <button disabled={count===0} onClick={() => setOpenModal(true)} className="btn glass text-lg bg-[#783d19ff] text-[#faf8ea] ">Borrow</button>
                         <div onClick={() => setOpenModal(false)} className={`fixed flex justify-center items-center z-[100] ${openModal ? 'visible opacity-1' : 'invisible opacity-0'} inset-0 w-full h-full backdrop-blur-sm bg-black/20 duration-100`}>
                             <div onClick={(e_) => e_.stopPropagation()} className={`absolute w-full lg:w-[500px] bg-[#faf8ea] text-[#783d19ff] drop-shadow-2xl rounded-lg ${openModal ? 'opacity-1 duration-300 translate-y-0' : '-translate-y-20 opacity-0 duration-150'}`}>
                                 <form onSubmit={handleSubmit} className="p-12">

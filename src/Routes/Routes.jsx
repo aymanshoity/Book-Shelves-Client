@@ -5,11 +5,11 @@ import SignIn from "../Authentication/SignIn";
 import SignUp from "../Authentication/SignUp";
 import AllBooks from "../BooksSection/AllBooks";
 import AddBook from "../BooksSection/AddBook";
-import BorrowedBooks from "../BooksSection/BorrowedBooks";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import UpdateBook from "../BooksSection/UpdateBook";
 import AllTypes from "../BooksSection/BookTypes/AllTypes";
 import Details from "../BooksSection/BookTypes/Details";
+import BorrowedBooks from "../BooksSection/BorrowedBooksSection/BorrowedBooks";
 
 
 export const router = createBrowserRouter([
@@ -27,6 +27,7 @@ export const router = createBrowserRouter([
             {path:'/register',element:<SignUp></SignUp>},
             {path:'/:category',element:<AllTypes></AllTypes>},
             {path:'/details/:id',element:<Details></Details>},
+            
         ]
     }
 ])

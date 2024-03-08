@@ -12,6 +12,16 @@ const AddBook = () => {
 
     const onSubmit = (data) => {
         console.log(data)
+
+        const addBook={
+            name:data.name,
+            image:data.image,
+            category:data.category,
+            authorName:data.authorName,
+            description:data.description,
+            ratings:parseFloat(data.ratings),
+            quantity:parseInt(data.quantity),
+        }
         Swal.fire({
             title: "Do you want to add this book?",
             showDenyButton: true,
@@ -21,7 +31,7 @@ const AddBook = () => {
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-                axiosSecure.post('/books', data)
+                axiosSecure.post('/books', addBook)
                     .then(res => {
                         console.log(res.data)
                         if (res.data.insertedId) {
@@ -89,14 +99,14 @@ const AddBook = () => {
                                     <label className="label">
                                         <span className="label-text text-[#fefae0ff]">Quantity</span>
                                     </label>
-                                    <input {...register("quantity", { required: true })} type="number" placeholder="Quantity" className="input input-bordered text-[#783d19ff]" required />
+                                    <input type="number" {...register("quantity", { required: true })}  placeholder="Quantity" className="input input-bordered text-[#783d19ff]"  required />
                                     {errors.quantity && <span className="text-[#fefae0ff]">This field is required</span>}
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text text-[#fefae0ff]">Ratings</span>
                                     </label>
-                                    <input {...register("ratings", { required: true, min: 0, max: 5  })} type="number" placeholder="Ratings out of 5" className="input input-bordered text-[#783d19ff]" required />
+                                    <input type="number" {...register("ratings", { required: true, min: 0, max: 5  })}  placeholder="Ratings out of 5" className="input input-bordered text-[#783d19ff]" required />
                                     {errors.ratings && <span className="text-[#fefae0ff]">This field is required</span>}
                                     {errors.ratings?.type === "min" && <span className="text-[#fefae0ff]">Choose between 1 to 5</span>}
                                     {errors.ratings?.type === "max" && <span className="text-[#fefae0ff]">Choose between 1 to 5</span>}

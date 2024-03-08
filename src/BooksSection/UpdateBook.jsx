@@ -50,7 +50,7 @@ const UpdateBook = () => {
                 {/* <SharedHeading heading={'Update Book'}></SharedHeading> */}
                 <div className="flex flex-col lg:flex-row gap-10 p-10 items-center">
                     <div className="lg:w-[1/4]">
-                        <img src={book.image} alt="" />
+                        <img className="w-[200px] h-[350px]" src={book.image} alt="" />
                     </div>
                     <div className="lg:w-3/4">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -90,7 +90,7 @@ const UpdateBook = () => {
                                     <label className="label">
                                         <span className="label-text text-[#fefae0ff]">Quantity</span>
                                     </label>
-                                    <input {...register("quantity", { required: true })} type="text" defaultValue={book.quantity} className="input input-bordered text-[#783d19ff]" required />
+                                    <input {...register("quantity", { required: true })} type="number" defaultValue={book.quantity} className="input input-bordered text-[#783d19ff]" required />
                                     {/* {errors.authorName && <span className="text-[#fefae0ff]">This field is required</span>} */}
                                 </div>
                                 <div className="form-control">

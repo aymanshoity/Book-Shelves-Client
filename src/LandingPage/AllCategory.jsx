@@ -7,7 +7,7 @@ const AllCategory = () => {
         <div className="py-24  ">
             <SharedHeading heading={'All categories'}></SharedHeading>
             <div className=" lg:w-[1280px] md:w[600px] w-[250px] mx-auto  grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-6">
-                <Link>
+                <Link to='/Thriller'>
                     <Slide direction="left">
                         <Zoom>
                             <motion.div
@@ -28,7 +28,7 @@ const AllCategory = () => {
                         </Zoom>
                     </Slide>
                 </Link>
-                <Link>
+                <Link to='/Science & Technology'>
                     <Slide direction="right">
                         <Zoom>
                             <motion.div
@@ -51,7 +51,7 @@ const AllCategory = () => {
                         </Zoom>
                     </Slide>
                 </Link>
-                <Link>
+                <Link to='/Literature & Fiction'>
                     <Slide direction="left">
                         <Zoom>
                             <motion.div
@@ -74,7 +74,7 @@ const AllCategory = () => {
                         </Zoom>
                     </Slide>
                 </Link>
-                <Link>
+                <Link to='/History'>
                     <Slide direction="right">
                         <Zoom>
                             <motion.div

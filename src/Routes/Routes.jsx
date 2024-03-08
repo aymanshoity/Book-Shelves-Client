@@ -8,6 +8,8 @@ import AddBook from "../BooksSection/AddBook";
 import BorrowedBooks from "../BooksSection/BorrowedBooks";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import UpdateBook from "../BooksSection/UpdateBook";
+import AllTypes from "../BooksSection/BookTypes/AllTypes";
+import Details from "../BooksSection/BookTypes/Details";
 
 
 export const router = createBrowserRouter([
@@ -23,6 +25,8 @@ export const router = createBrowserRouter([
             {path:'/borrowedBooks',element:<BorrowedBooks></BorrowedBooks>},
             {path:'/login',element:<SignIn></SignIn>},
             {path:'/register',element:<SignUp></SignUp>},
+            {path:'/:category',element:<AllTypes></AllTypes>},
+            {path:'/details/:id',element:<Details></Details>},
         ]
     }
 ])

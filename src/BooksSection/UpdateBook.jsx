@@ -15,6 +15,7 @@ const UpdateBook = () => {
                 setBook(res.data)
             })
     }, [axiosSecure, id])
+    
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
@@ -56,30 +57,30 @@ const UpdateBook = () => {
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-[#fefae0ff]">Book Image URL</span>
+                                        <span className="label-text text-[#783d19ff]">Book Image URL</span>
                                     </label>
                                     <input {...register("image", { required: true })} type="url" placeholder="Book Image URL" defaultValue={book.image} className="input input-bordered text-[#783d19ff]" required />
                                     {/* {errors.image && <span className="text-[#fefae0ff]">This field is required</span>} */}
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-[#fefae0ff]">Book Name</span>
+                                        <span className="label-text text-[#783d19ff]">Book Name</span>
                                     </label>
                                     <input {...register("name", { required: true })} type="text" placeholder="Book Name" defaultValue={book.name} className="input input-bordered text-[#783d19ff]" required />
                                     {/* {errors.image && <span className="text-[#fefae0ff]">This field is required</span>} */}
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-[#fefae0ff]">Author Name</span>
+                                        <span className="label-text text-[#783d19ff]">Author Name</span>
                                     </label>
                                     <input {...register("authorName", { required: true })} type="text" defaultValue={book.authorName} className="input input-bordered text-[#783d19ff]" required />
                                     {/* {errors.authorName && <span className="text-[#fefae0ff]">This field is required</span>} */}
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Ratings</span>
+                                        <span className="label-text text-[#783d19ff]">Ratings</span>
                                     </label>
-                                    <input {...register("ratings", { required: true, max: 5, min: 0 })} type="number" defaultValue={book.ratings} className="input input-bordered" required />
+                                    <input {...register("ratings", { required: true, max: 5, min: 0 })} type="number" defaultValue={book.ratings} className="input input-bordered text-[#783d19ff]" required />
                                     {/* {errors.ratings && <span className="text-[#fefae0ff]">This field is required</span>} */}
                                     {errors.ratings?.type === 'min' && <span className="text-[#fefae0ff]">Rate between 0 to 5</span>}
                                     {errors.ratings?.type === 'max' && <span className="text-[#fefae0ff]">Rate between 0 to 5</span>}
@@ -94,9 +95,9 @@ const UpdateBook = () => {
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Category</span>
+                                        <span className="label-text text-[#783d19ff]">Category</span>
                                     </label>
-                                    <select {...register("category", { required: true })}  className="input input-bordered">
+                                    <select {...register("category", { required: true })}  className="input input-bordered text-[#783d19ff]">
                                         <option disabled selected value={book.category}>{book.category}</option>
                                         <option value="Thriller">Thriller</option>
                                         <option value="Literature & Fiction">Literature & Fiction</option>
@@ -109,7 +110,7 @@ const UpdateBook = () => {
 
 
                             <div className="form-control mt-6">
-                                <button className="btn ">Update</button>
+                                <button className="btn text-[#783d19ff]">Update</button>
                             </div>
                         </form>
                     </div>

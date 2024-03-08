@@ -4,7 +4,7 @@ import Navbar from "../../Navbar/Navbar";
 
 const Root = () => {
     return (
-        <div className="bg-[#fefae0ff] font">
+        <div className="bg-[#faf8ea] font">
             <Navbar></Navbar>
             <Outlet></Outlet>
         </div>

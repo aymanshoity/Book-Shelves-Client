@@ -2,7 +2,9 @@ import axios from "axios";
 
 
 const AxiosPublic=axios.create({
-    baseURL:'http://localhost:5000'
+    baseURL: 'https://book-shelves-server.vercel.app'
+    // https://book-shelves-server.vercel.app/
+    // http://localhost:5000
 })
 
 const UseAxiosPublic = () => {

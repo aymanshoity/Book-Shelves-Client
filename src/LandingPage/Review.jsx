@@ -17,7 +17,7 @@ const Review = () => {
 
 
 
-            <Slide direction='up'>
+            <Slide direction='up' duration="1000">
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={30}

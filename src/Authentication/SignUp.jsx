@@ -6,8 +6,10 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
 import { FaGoogle } from "react-icons/fa";
+import UseAxiosPublic from "../Hooks/UseAxiosPublic";
 const SignUp = () => {
     const { user, createUser, googleSignIn, logOut } = useContext(AuthContext)
+    const AxiosPublic = UseAxiosPublic()
     const navigate = useNavigate();
     const {
         register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -21,13 +23,33 @@ const SignUp = () => {
 
                 })
                     .then(result => {
-                        console.log(result)
-                        Swal.fire("User Created Successfully!");
-                        reset()
-                        logOut()
-                            .then(result => console.log(result))
-                            .catch(error => console.log(error))
-                        navigate('/')
+                        console.log(result.user)
+                        const readerData = {
+                            name: user?.displayName,
+                            email: user?.email,
+                            role: 'reader'
+                        }
+
+                        AxiosPublic.post('/readers', readerData)
+                            .then(res => {
+                                console.log(res.data)
+                                if (res.data.insertedId) {
+                                    Swal.fire("User Created Successfully!");
+                                    reset()
+                                    logOut()
+                                        .then(result => console.log(result))
+                                        .catch(error => console.log(error))
+                                    navigate('/')
+                                } else {
+                                    Swal.fire("User Already Created !");
+                                    reset()
+                                    logOut()
+                                        .then(result => console.log(result))
+                                        .catch(error => console.log(error))
+                                    navigate('/login')
+                                }
+                            })
+
                     })
                     .catch(error => {
                         console.log(error)
@@ -46,12 +68,33 @@ const SignUp = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user)
-                Swal.fire(`${result.user.displayName} Registered Successfully!`);
-                reset()
-                logOut()
-                    .then(result => console.log(result))
-                    .catch(error => console.log(error))
-                navigate('/')
+                const readerData = {
+                    name: result.user?.displayName,
+                    email: result.user?.email,
+                    role: 'reader'
+                }
+                AxiosPublic.post('/readers', readerData)
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.insertedId) {
+                            Swal.fire(`${result.user.displayName} Registered Successfully!`);
+                            reset()
+                            logOut()
+                                .then(result => console.log(result))
+                                .catch(error => console.log(error))
+                            navigate('/')
+                        } else {
+                            Swal.fire("User Already Created !");
+                            reset()
+                            logOut()
+                                .then(result => console.log(result))
+                                .catch(error => console.log(error))
+                            navigate('/login')
+                        }
+                    })
+
+
+
             })
             .catch(error => {
                 console.log(error.code)
@@ -68,7 +111,7 @@ const SignUp = () => {
                     <Fade cascade>
                         <div className="text-center flex flex-col items-center flex-1 text-[#783d19ff]">
 
-                            <img className="w-[80px] h-[80px]" src="../../public/book.png" alt="" />
+                            <img className="w-[80px] h-[80px]" src="https://i.ibb.co/5n6pym4/book.png" alt="" />
                             <h1 className=" text-5xl font-bold">Welcome to Book Shelves!!</h1>
                             <p className="py-6">Join Us today and Explore the world of books </p>
                         </div>

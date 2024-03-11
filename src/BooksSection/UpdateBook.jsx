@@ -3,18 +3,31 @@ import { useForm } from "react-hook-form"
 import UseAxiosSecure from "../Hooks/UseAxiosSecure";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useQuery } from "@tanstack/react-query";
 
 const UpdateBook = () => {
     const [book, setBook] = useState([])
     const axiosSecure = UseAxiosSecure()
     const { id } = useParams()
-    useEffect(() => {
-        axiosSecure.get(`/books/${id}`)
+    const { data: updateBook = [] } = useQuery({
+        queryKey: ['updateBook'],
+        queryFn: async () => {
+            await axiosSecure.get(`/books/${id}`)
             .then(res => {
                 console.log(res.data)
                 setBook(res.data)
+                return res.data 
             })
-    }, [axiosSecure, id])
+            
+        }
+    })
+    // useEffect(() => {
+    //     axiosSecure.get(`/books/${id}`)
+    //         .then(res => {
+    //             console.log(res.data)
+    //             setBook(res.data)
+    //         })
+    // }, [axiosSecure, id])
     
 
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -80,7 +93,7 @@ const UpdateBook = () => {
                                     <label className="label">
                                         <span className="label-text text-[#783d19ff]">Ratings</span>
                                     </label>
-                                    <input {...register("ratings", { required: true, max: 5, min: 0 })} type="number" defaultValue={book.ratings} className="input input-bordered text-[#783d19ff]" required />
+                                    <input {...register("ratings", { required: true, max: 5, min: 0 })} type="number" step="0.1" defaultValue={book.ratings} className="input input-bordered text-[#783d19ff]" required />
                                     {/* {errors.ratings && <span className="text-[#fefae0ff]">This field is required</span>} */}
                                     {errors.ratings?.type === 'min' && <span className="text-[#fefae0ff]">Rate between 0 to 5</span>}
                                     {errors.ratings?.type === 'max' && <span className="text-[#fefae0ff]">Rate between 0 to 5</span>}

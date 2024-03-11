@@ -2,54 +2,71 @@ import { useEffect, useState } from "react";
 import SharedHeading from "../SharedComponents/SharedHeading";
 import UseAxiosSecure from "../Hooks/UseAxiosSecure";
 import SingleBook from "./SingleBook";
+import { useQuery } from "@tanstack/react-query";
 
 
 const AllBooks = () => {
-    const categoryNames=['All Books','Available Books','Thriller','Literature & Fiction','History','Science & Technology']
+    const categoryNames = ['All Books', 'Available Books', 'Thriller', 'Literature & Fiction', 'History', 'Science & Technology']
     const [categories, setCategories] = useState([])
     const [displayCategories, setDisplayCategories] = useState([])
-    const [clicked,setClicked]=useState('')
-    const axiosSecure=UseAxiosSecure()
-    const handleClicked=name=>{
+    const [clicked, setClicked] = useState('')
+    const axiosSecure = UseAxiosSecure()
+
+    const { data: allBooks = [] } = useQuery({
+        queryKey: ['allBooks'],
+        queryFn: async () => {
+            await axiosSecure.get('/books')
+                .then(res => {
+                    console.log(res.data)
+                    setCategories(res.data)
+                    setDisplayCategories(res.data)
+                    return {allBooks: res.data}
+                })
+
+        }
+        
+    })
+    
+    const handleClicked = name => {
         console.log(name)
         setClicked(name)
-    
+
     }
+    // useEffect(() => {
+    //     axiosSecure.get('/books')
+    //         .then(res => {
+    //             console.log(res.data)
+    //             setCategories(res.data)
+    //             setDisplayCategories(res.data)
+    //         })
+
+    // }, [axiosSecure])
     useEffect(() => {
-        axiosSecure.get('/books')
-            .then(res => {
-                console.log(res.data)
-                setCategories(res.data)
-                setDisplayCategories(res.data)
-            })
-            
-    }, [axiosSecure])
-    useEffect(()=>{
-        if( clicked==='Thriller'){
-            const Thriller=categories.filter(item=>item.category==="Thriller")
+        if (clicked === 'Thriller') {
+            const Thriller = categories.filter(item => item.category === "Thriller")
             console.log(Thriller)
             setDisplayCategories(Thriller)
-        }else if(clicked==='Literature & Fiction'){
-            const Literature=categories.filter(item=>item.category==="Literature & Fiction")
+        } else if (clicked === 'Literature & Fiction') {
+            const Literature = categories.filter(item => item.category === "Literature & Fiction")
             console.log(Literature)
             setDisplayCategories(Literature)
-        }else if( clicked==='History'){
-            const History=categories.filter(item=>item.category==="History")
+        } else if (clicked === 'History') {
+            const History = categories.filter(item => item.category === "History")
             console.log(History)
             setDisplayCategories(History)
-        }else if( clicked==='Science & Technology'){
-            const Science=categories.filter(item=>item.category==="Science & Technology")
+        } else if (clicked === 'Science & Technology') {
+            const Science = categories.filter(item => item.category === "Science & Technology")
             console.log(Science)
             setDisplayCategories(Science)
-        }else if( clicked==='Available Books'){
-            const available=categories.filter(item=>item.quantity>0)
+        } else if (clicked === 'Available Books') {
+            const available = categories.filter(item => item.quantity > 0)
             console.log(available)
             setDisplayCategories(available)
-        }else if( clicked==='All Books'){
-            
+        } else if (clicked === 'All Books') {
+
             setDisplayCategories(categories)
         }
-    },[categories,clicked])
+    }, [categories, clicked])
     return (
         <div className="py-24 lg:w-[1280px] md:w-[600px] w-[250px] mx-auto  ">
             <div>
@@ -62,7 +79,7 @@ const AllBooks = () => {
                         <li className="p-2 text-center">----Select Category----</li>
                         {
                             categoryNames.map((name, index) =>
-                                <li key={index} onClick={() => handleClicked(name)}><a className={clicked===name && 'text-[#783d19ff] bg-[#fefae0ff]'}>{name}</a></li>)
+                                <li key={index} onClick={() => handleClicked(name)}><a className={clicked === name && 'text-[#783d19ff] bg-[#fefae0ff]'}>{name}</a></li>)
                         }
                     </ul>
                 </div>

@@ -1,21 +1,35 @@
 import { useParams } from "react-router-dom";
-import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 import { useEffect, useState } from "react";
 import SharedHeading from "../../SharedComponents/SharedHeading";
 import SingleType from "./SingleType";
+import { useQuery } from "@tanstack/react-query";
+import UseAxiosPublic from "../../Hooks/UseAxiosPublic";
 
 
 const AllTypes = () => {
-    const {category}=useParams();
-    const axiosSecure=UseAxiosSecure()
-    const [categories,setCategories]=useState([])
-    useEffect(()=>{
-        axiosSecure.get(`/books/category/${category}`)
-        .then(res=>{
-            console.log(res.data)
-            setCategories(res.data)
-        })
-    },[category,axiosSecure])
+    const { category } = useParams();
+    const axiosPublic=UseAxiosPublic()
+    const [categories, setCategories] = useState([])
+    const { data: allTypeBooks = [] ,refetch} = useQuery({
+        queryKey: ['allType '],
+        queryFn: async () => {
+            await axiosPublic.get(`/books/category/${category}`)
+                .then(res => {
+                    console.log(res.data)
+                    setCategories(res.data)
+                    refetch()
+                })
+
+        }
+    })
+    console.log(allTypeBooks)
+    // useEffect(() => {
+    //     axiosSecure.get(`/books/category/${category}`)
+    //         .then(res => {
+    //             console.log(res.data)
+    //             setCategories(res.data)
+    //         })
+    // }, [category, axiosSecure])
     return (
         <div>
             <div>
@@ -24,7 +38,7 @@ const AllTypes = () => {
             <SharedHeading heading={`${category} Books`}></SharedHeading>
             <div className="lg:w-[1280px] md:[600px] w-[250px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
-                    categories.map(book=><SingleType key={book._id} book={book}></SingleType>)
+                    categories.map(book => <SingleType key={book._id} book={book}></SingleType>)
                 }
             </div>
         </div>

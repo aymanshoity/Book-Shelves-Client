@@ -53,7 +53,7 @@ const AddBook = () => {
             <SharedHeading heading={'Add a Book'}></SharedHeading>
             <div className="flex lg:flex-row flex-col gap-8 lg:w-[1280px] md:w-[600px] w-[250px] mx-auto">
                 <div className="flex-1">
-                    <img className="border border-[#783d19ff]  mx-auto rounded-lg lg:h-[600px]" src="../../public/Going to work.gif" alt="" />
+                    <img className="border border-[#783d19ff]  mx-auto rounded-lg lg:h-[600px]" src="https://i.ibb.co/fk5wzHS/Going-to-work.gif" alt="" />
                 </div>
                 <div className=" flex-1 card shrink-0  md:w-[500px] w-[250px]  shadow-2xl bg-[#b99470ff]  ">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -106,7 +106,7 @@ const AddBook = () => {
                                     <label className="label">
                                         <span className="label-text text-[#fefae0ff]">Ratings</span>
                                     </label>
-                                    <input type="number" {...register("ratings", { required: true, min: 0, max: 5  })}  placeholder="Ratings out of 5" className="input input-bordered text-[#783d19ff]" required />
+                                    <input type="number" step="0.1" {...register("ratings", { required: true, min: 0, max: 5  })}  placeholder="Ratings out of 5" className="input input-bordered text-[#783d19ff]" required />
                                     {errors.ratings && <span className="text-[#fefae0ff]">This field is required</span>}
                                     {errors.ratings?.type === "min" && <span className="text-[#fefae0ff]">Choose between 1 to 5</span>}
                                     {errors.ratings?.type === "max" && <span className="text-[#fefae0ff]">Choose between 1 to 5</span>}

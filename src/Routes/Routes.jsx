@@ -10,6 +10,9 @@ import UpdateBook from "../BooksSection/UpdateBook";
 import AllTypes from "../BooksSection/BookTypes/AllTypes";
 import Details from "../BooksSection/BookTypes/Details";
 import BorrowedBooks from "../BooksSection/BorrowedBooksSection/BorrowedBooks";
+import PrivateRoute from "./PrivateRoute";
+import AllReaders from "../BooksSection/AllReaders";
+import LibrarianRoute from "./LibrarianRoute";
 
 
 export const router = createBrowserRouter([
@@ -19,15 +22,17 @@ export const router = createBrowserRouter([
         errorElement:<ErrorPage></ErrorPage>,
         children:[
             {path:'/',element:<Home></Home>},
-            {path:'/addBook',element:<AddBook></AddBook>},
-            {path:'/updateBook/:id',element:<UpdateBook></UpdateBook>},
-            {path:'/allBooks',element:<AllBooks></AllBooks>},
-            {path:'/borrowedBooks',element:<BorrowedBooks></BorrowedBooks>},
             {path:'/login',element:<SignIn></SignIn>},
             {path:'/register',element:<SignUp></SignUp>},
-            {path:'/:category',element:<AllTypes></AllTypes>},
-            {path:'/details/:id',element:<Details></Details>},
-            
+            // readers access
+            {path:'/:category',element:<PrivateRoute><AllTypes></AllTypes></PrivateRoute>},
+            {path:'/details/:id',element:<PrivateRoute><Details></Details></PrivateRoute>},
+            {path:'/borrowedBooks',element:<PrivateRoute><BorrowedBooks></BorrowedBooks></PrivateRoute>},
+            // librarian access
+            {path:'/addBook',element:<LibrarianRoute><AddBook></AddBook></LibrarianRoute>},
+            {path:'/updateBook/:id',element:<LibrarianRoute><UpdateBook></UpdateBook></LibrarianRoute>},
+            {path:'/allBooks',element:<LibrarianRoute><AllBooks></AllBooks></LibrarianRoute>},
+            {path:'/allReaders',element:<LibrarianRoute><PrivateRoute></PrivateRoute></LibrarianRoute>},
         ]
     }
 ])

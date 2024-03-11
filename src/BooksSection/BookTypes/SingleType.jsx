@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const SingleType = ({book}) => {
     const { _id,name, image, authorName, ratings, category } = book;
@@ -12,7 +13,8 @@ const SingleType = ({book}) => {
                 <h2 className="card-title font-extrabold h-[80px] ">{name}</h2>
                 <p className='font-bold pt-2'>Author Name:{authorName}</p>
                 <p>Category: {category}</p>
-                <p>Ratings:</p>
+                <span className="flex items-center"> <Rating
+                   style={{ maxWidth: 180, width: '50%', margin:'auto' }} value={ratings} readOnly /></span>
                 <div className="card-actions">
                     <Link to={`/details/${_id}`}>
                         <button className="btn bg-[#783d19ff] text-[#fefae0ff]">Details</button>

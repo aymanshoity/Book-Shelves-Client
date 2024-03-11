@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { Slide } from "react-awesome-reveal";
-import { Link, useNavigate } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { FaGoogle } from "react-icons/fa";
@@ -8,6 +8,8 @@ import { FaGoogle } from "react-icons/fa";
 const SignIn = () => {
     const { loginUser, googleSignIn } = useContext(AuthContext)
     const navigate = useNavigate()
+    const location=useLocation()
+    const from=location.state?.from?.pathname || '/'
     const handleLogin = e => {
         e.preventDefault()
         const form = e.target;
@@ -26,7 +28,7 @@ const SignIn = () => {
                     text: `${result.user.displayName} logged in Successfully!!`,
                     icon: "success"
                 });
-                navigate('/')
+                navigate(from,{replace:true})
             })
             .catch(error => {
                 console.log(error.code)
@@ -44,7 +46,7 @@ const SignIn = () => {
                     text: `${result.user.displayName} logged in Successfully!!`,
                     icon: "success"
                 });
-                navigate('/')
+                navigate(from,{replace:true})
             })
             .catch()
     }
@@ -52,10 +54,10 @@ const SignIn = () => {
         <div className="py-40">
             <div className="min-h-screen lg:w-[1280px]  mx-auto">
                 <div className="flex flex-col items-center  gap-6">
-                    <Slide direction="up" >
+                    <Fade  >
                         <div className="text-center flex flex-col items-center flex-1 text-[#783d19ff]">
 
-                            <img className="w-[80px] h-[80px]" src="../../public/book.png" alt="" />
+                            <img className="w-[80px] h-[80px]" src="https://i.ibb.co/5n6pym4/book.png" alt="" />
                             <h1 className=" text-5xl font-bold">Glad to get you back!!</h1>
                             <p className="py-6">Let's explore the library together!! </p>
                         </div>
@@ -84,11 +86,11 @@ const SignIn = () => {
                             </form>
                             <div className="divider  text-[#783d19ff]">OR</div>
                             <div className="flex flex-col justify-center items-center py-10">
-                                <p>Sign up with</p>
+                                <p>Sign In with</p>
                                 <button onClick={handleGoogle} className="btn bg-[#783d19ff]  text-[#fefae0ff] mt-5"><FaGoogle /> Google</button>
                             </div>
                         </div>
-                    </Slide>
+                    </Fade>
                 </div>
             </div>
         </div>

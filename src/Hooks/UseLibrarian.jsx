@@ -5,12 +5,13 @@ import UseAxiosSecure from "./UseAxiosSecure";
 
 
 const UseLibrarian = () => {
-    const {user}=useContext(AuthContext)
+    const {user,loading}=useContext(AuthContext)
     const axiosSecure=UseAxiosSecure()
     const {data: isLibrarian=[],isPending:isLibrarianLoading}=useQuery({
         queryKey:[user?.email, 'isLibrarian'],
+        enabled:!loading,
         queryFn: async()=>{
-            const res=await axiosSecure.get(`/readers/librarian/${user.email}`)
+            const res=await axiosSecure.get(`/readers/librarian/${user?.email}`)
             console.log(res.data)
             return res.data.librarian
         }

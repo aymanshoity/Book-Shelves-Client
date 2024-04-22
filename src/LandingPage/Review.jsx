@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Slide } from "react-awesome-reveal";
 // import required modules
 import { Pagination } from 'swiper/modules';
 const Review = () => {
@@ -15,9 +14,6 @@ const Review = () => {
         <div className='py-24 mx-auto'>
             <SharedHeading heading={"Client's Reviews"}></SharedHeading>
 
-
-
-            <Slide direction='up' duration="1000">
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={30}
@@ -26,10 +22,10 @@ const Review = () => {
                     }}
                     modules={[Pagination]}
                     className="mySwiper  "
-                    style={{backgroundImage: 'url(https://i.ibb.co/hVbQLDH/pic-16.jpg)',  backgroundRepeat: 'no-repeat',objectFit:"cover", width:"100vw",backgroundSize: '100% 100%'}}
+                    // style={{backgroundImage: 'url(https://i.ibb.co/hVbQLDH/pic-16.jpg)',  backgroundRepeat: 'no-repeat',objectFit:"cover", width:"100vw",backgroundSize: '100% 100%'}}
                 >
                     <SwiperSlide>
-                        <div className='flex flex-col items-center  w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center bg-[#fefae0ff] text-[#783d19ff] rounded-lg'>
+                        <div className='flex flex-col items-center  w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center border-4 border-[#000068] text-[#000068] rounded-lg'>
                             <img className='w-[80px] h-[80px] rounded-full' src="https://i.ibb.co/x7x8qQr/t5.jpg" alt="" />
                             <h1 className='font-bold text-xl'>Jane Doe</h1>
                             <h1 className='font-semibold text-sm'> Avid Reader</h1>
@@ -37,7 +33,7 @@ const Review = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='flex flex-col items-center w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center bg-[#fefae0ff] text-[#783d19ff] rounded-lg'>
+                        <div className='flex flex-col items-center w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center  text-[#000068] border-4 border-[#000068] rounded-lg'>
                             <img className='w-[80px] h-[80px] rounded-full' src="https://i.ibb.co/9Gt0CdP/t4.png" alt="" />
                             <h1 className='font-bold text-xl'>John Smith</h1>
                             <h1 className='font-semibold text-sm'>Casual Reader</h1>
@@ -45,7 +41,7 @@ const Review = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='flex flex-col items-center w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center bg-[#fefae0ff] text-[#783d19ff] rounded-lg'>
+                        <div className='flex flex-col items-center w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center border-4 border-[#000068] text-[#000068] rounded-lg'>
                             <img className='w-[80px] h-[80px] rounded-full' src="https://i.ibb.co/vw0v2Kv/t3.png" alt="" />
                             <h1 className='font-bold text-xl'>Emily Turnerr</h1>
                             <h1 className='font-semibold text-sm'>Book Club Organizer</h1>
@@ -53,7 +49,7 @@ const Review = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='flex flex-col items-center w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center bg-[#fefae0ff] text-[#783d19ff] rounded-lg'>
+                        <div className='flex flex-col items-center w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center border-4 border-[#000068] text-[#000068] rounded-lg'>
                             <img className='w-[80px] h-[80px] rounded-full' src="https://i.ibb.co/9Gt0CdP/t4.png" alt="" />
                             <h1 className='font-bold text-xl'>Alex Rodriguez</h1>
                             <h1 className='font-semibold text-sm'>Literature Enthusiast</h1>
@@ -61,7 +57,7 @@ const Review = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='flex flex-col items-center w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center bg-[#fefae0ff] text-[#783d19ff] rounded-lg'>
+                        <div className='flex flex-col items-center w-[250px] md:w-[600px] lg:w-[800px] mx-auto my-10 p-10 text-center border-4 border-[#000068] text-[#000068] rounded-lg'>
                             <img className='w-[80px] h-[80px] rounded-full' src="https://i.ibb.co/jgrzGrg/t2.png" alt="" />
                             <h1 className='font-bold text-xl'>Sophie Chang</h1>
                             <h1 className='font-semibold text-sm'>Busy Professional</h1>
@@ -71,7 +67,7 @@ const Review = () => {
 
 
                 </Swiper>
-            </Slide>
+            
 
 
 

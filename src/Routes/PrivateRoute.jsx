@@ -9,13 +9,16 @@ const PrivateRoute = ({children}) => {
     const {user,loading}=useContext(AuthContext)
     const location=useLocation()
     if(loading){
-        <div className="w-10 h-10 my-36 animate-[spin_1s_linear_infinite] rounded-full border-4 border-r-sky-900 border-sky-400"></div>
+       return <div className="flex flex-col items-center justify-center">
+        <div className="w-10 h-10 my-36 animate-[spin_1s_linear_infinite] rounded-full border-4 border-r-white border-[#000068]">
+        </div>
+       </div>
     }
     if(user){
-        return children
-    }else{
-        return <Navigate to='/login' state={{from:location}}></Navigate>
+        return children;
     }
+
+    return <Navigate to='/login' state={{from:location}}></Navigate>
     
 };
 

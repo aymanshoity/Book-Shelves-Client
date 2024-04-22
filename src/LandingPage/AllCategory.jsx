@@ -1,102 +1,94 @@
 import { Link } from "react-router-dom";
 import SharedHeading from "../SharedComponents/SharedHeading";
-import { Slide, Zoom } from "react-awesome-reveal";
 import { motion } from "framer-motion"
 const AllCategory = () => {
     return (
         <div className="py-24  ">
-            <SharedHeading heading={'All categories'}></SharedHeading>
-            <div className=" lg:w-[1280px] md:w[600px] w-[250px] mx-auto  grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-6">
-                <Link to='/Thriller'>
-                    <Slide direction="left">
-                        <Zoom>
-                            <motion.div
-                                className=" w-[200px] h-[450px] bg-[#fefae0ff] shadow-xl"
-                                whileHover={{ scale: [null, 1.2, 1.1] }}
-                                transition={{ duration: 0.8 }}
+            <SharedHeading heading={'Explore Categories'}></SharedHeading>
+            <div className=" lg:w-[1280px] px-10 mx-auto  grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-6">
 
-                            >
-                                <figure>
-                                    <img className="w-[200px] h-[350px] " src="https://i.ibb.co/2qpFDNy/Red-Scarf-Girl.jpg" alt="Shoes" />
-                                </figure>
-                                <div className="card-body">
-                                    <h2 className="card-title text-center">Thriller</h2>
+                <div className="  bg-[#000068] bg-opacity-10 shadow-xl flex flex-col items-center justify-center">
+                    <motion.figure
+                        className="py-10"
+                        whileHover={{ scale: [null, 1.2, 1.1] }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <img className="w-[200px] h-[300px] " src="https://i.ibb.co/2qpFDNy/Red-Scarf-Girl.jpg" alt="Shoes" />
+                    </motion.figure>
+                    <div className="card-body">
+                        <Link to='/dashboard/Thriller'>
+                            <h2 className="btn w-[150px] py-2 px-4 rounded-full bg-[#000068] text-white ">Thriller</h2>
+                        </Link>
 
-                                </div>
-                            </motion.div>
+                    </div>
+                </div>
 
-                        </Zoom>
-                    </Slide>
-                </Link>
-                <Link to='/Science & Technology'>
-                    <Slide direction="right">
-                        <Zoom>
-                            <motion.div
-                                className=" w-[200px] h-[450px] bg-[#fefae0ff] shadow-xl"
-                                whileHover={{ scale: [null, 1.2, 1.1] }}
-                                transition={{ duration: 0.8 }}
 
-                            >
-                                <figure>
+                <div className="  bg-[#000068] bg-opacity-10 shadow-xl flex flex-col items-center justify-center">
+                    <motion.figure
 
-                                    <img className=" w-[200px] h-[350px] " src="https://i.ibb.co/6J3ykhk/Solidworks.jpg" alt="Shoes" />
+                        className="py-10"
+                        whileHover={{ scale: [null, 1.2, 1.1] }}
+                        transition={{ duration: 0.8 }}
 
-                                </figure>
-                                <div className="card-body">
-                                    <h2 className="card-title text-center">Science & Technology</h2>
+                    >
 
-                                </div>
-                            </motion.div>
+                        <img className=" w-[200px] h-[300px] " src="https://i.ibb.co/6J3ykhk/Solidworks.jpg" alt="Shoes" />
 
-                        </Zoom>
-                    </Slide>
-                </Link>
-                <Link to='/Literature & Fiction'>
-                    <Slide direction="left">
-                        <Zoom>
-                            <motion.div
-                                className=" w-[200px] h-[450px] bg-[#fefae0ff] shadow-xl"
-                                whileHover={{ scale: [null, 1.2, 1.1] }}
-                                transition={{ duration: 0.8}}
+                    </motion.figure>
+                    <div className="card-body">
+                        <Link to='/dashboard/Science & Technology'>
+                            <h2 className="btn w-[150px] py-2 px-4 rounded-full bg-[#000068] text-white ">Science & Technology</h2>
+                        </Link>
 
-                            >
-                                <figure>
+                    </div>
+                </div>
 
-                                    <img className="w-[200px] h-[350px]" src="https://i.ibb.co/xYCPgKm/The-Great-Gatsby.jpg" alt="Shoes" />
 
-                                </figure>
-                                <div className="card-body">
-                                    <h2 className="card-title text-center">Literature & Fiction</h2>
 
-                                </div>
-                            </motion.div>
+                <div className="  bg-[#000068] bg-opacity-10 shadow-xl flex flex-col items-center justify-center">
+                    <motion.figure
+                        className="py-10"
+                        whileHover={{ scale: [null, 1.2, 1.1] }}
+                        transition={{ duration: 0.8 }}
 
-                        </Zoom>
-                    </Slide>
-                </Link>
-                <Link to='/History'>
-                    <Slide direction="right">
-                        <Zoom>
-                            <motion.div
-                                className=" w-[200px] h-[450px] bg-[#fefae0ff] shadow-xl"
-                                whileHover={{ scale: [null, 1.2, 1.1] }}
-                                transition={{ duration: 0.8 }}
+                    >
 
-                            >
-                                <figure>
+                        <img className="w-[200px] h-[300px]" src="https://i.ibb.co/xYCPgKm/The-Great-Gatsby.jpg" alt="Shoes" />
 
-                                    <img className="w-[200px] h-[350px]" src="https://i.ibb.co/bR1r2xp/Live-from-Death-Row.jpg" alt="Shoes" />
+                    </motion.figure>
+                    <div className="card-body">
+                        <Link to='/dashboard/Literature & Fiction'>
+                            <h2 className="btn w-[150px] py-2 px-4 rounded-full bg-[#000068] text-white ">Literature & Fiction</h2>
+                        </Link>
 
-                                </figure>
-                                <div className="card-body text-center">
-                                    <h2 className="card-title text-center">History</h2>
+                    </div>
+                </div>
 
-                                </div>
-                            </motion.div>
 
-                        </Zoom>
-                    </Slide>
-                </Link>
+
+                <div className="  bg-[#000068] bg-opacity-10 shadow-xl flex flex-col items-center justify-center">
+                    <motion.figure
+                        className="py-10"
+                        whileHover={{ scale: [null, 1.2, 1.1] }}
+                        transition={{ duration: 0.8 }}
+
+                    >
+
+                        <img className="w-[200px] h-[300px]" src="https://i.ibb.co/bR1r2xp/Live-from-Death-Row.jpg" alt="Shoes" />
+
+                    </motion.figure>
+                    <div className="card-body text-center">
+                        <Link to='/dashboard/History'>
+
+                            <btn className="btn w-[150px] py-2 px-4 rounded-full bg-[#000068] text-white ">History</btn>
+                        </Link>
+
+                    </div>
+                </div>
+
+
+
             </div>
 
         </div>

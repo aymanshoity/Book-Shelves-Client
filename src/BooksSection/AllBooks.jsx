@@ -68,22 +68,21 @@ const AllBooks = () => {
         }
     }, [categories, clicked])
     return (
-        <div className="py-24 lg:w-[1280px] md:w-[600px] w-[250px] mx-auto  ">
-            <div>
-                <img className="w-full h-[400px]" src="../../public/category.jpeg" alt="" />
-            </div>
+        <div className=" mx-auto  ">
+            
             <SharedHeading heading={'All Books'}></SharedHeading>
-            <div className="flex lg:flex-row flex-col gap-6  justify-start items-start ">
-                <div className="lg:w-1/4 ">
-                    <ul className="menu bg-[#783d19ff] text-[#fefae0ff] rounded-lg ">
-                        <li className="p-2 text-center">----Select Category----</li>
+            <div className="flex  flex-col gap-6  justify-center items-start ">
+                <div className="w-full flex flex-col items-center justify-center">
+                <h1 className="p-2 md:text-2xl text-xl text-center text-[#000068]">----Select Category----</h1>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-5 ">
                         {
                             categoryNames.map((name, index) =>
-                                <li key={index} onClick={() => handleClicked(name)}><a className={clicked === name && 'text-[#783d19ff] bg-[#fefae0ff]'}>{name}</a></li>)
+                                <button className={clicked===name ? 'btn px-4 py-2 text-[#000068] bg-[#000068]  bg-opacity-10 border-[#000068] rounded-full w-[180px]':'btn px-4 py-2 bg-[#000068] text-white rounded-full w-[180px]'} key={index} onClick={() => handleClicked(name)}><a className={clicked === name && ''}>{name}</a></button>)
                         }
-                    </ul>
+                    </div>
                 </div>
-                <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {
                         displayCategories.map(book => <SingleBook key={book._id} book={book}></SingleBook>)
                     }

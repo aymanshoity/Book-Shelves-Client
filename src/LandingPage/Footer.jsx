@@ -2,11 +2,11 @@
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center p-10 bg-[#90b2ddff] text-[#783d19ff]">
+        <footer className="footer footer-center p-10 bg-[#000068] text-white">
             <aside>
                 <img className="w-[80px] h-[80px]" src="https://i.ibb.co/5n6pym4/book.png" alt="" />
                 <p className="font-bold">
-                    Book Shelves <br />Your Gateway to a World of Books.
+                    <span className="text-xl">Book Shelves</span> <br />Your Gateway to a World of Books.
                 </p>
                 <p>Copyright © 2024 - All right reserved</p>
             </aside>

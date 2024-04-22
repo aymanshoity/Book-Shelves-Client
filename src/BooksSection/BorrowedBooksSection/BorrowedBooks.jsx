@@ -12,7 +12,7 @@ const BorrowedBooks = () => {
     const axiosPublic=UseAxiosPublic()
     const [borrowedBooks,setBorrowedBooks]=useState([])
     
-    const { data: borrowBooks = [] } = useQuery({
+    const { data: borrowBooks = [],refetch } = useQuery({
         queryKey: ['borrowBooks',user?.email],
         queryFn: async () => {
             const res=await axiosPublic.get(`/borrowedBooks/${user?.email}`)
@@ -40,7 +40,7 @@ const BorrowedBooks = () => {
             {borrowedBooks.length===0 && <span className="text-red-500 text-2xl text-center font-bold flex justify-center">Nothing Borrowed</span>}
             <div className="">
                 {
-                    borrowedBooks.map(book=><SingleBorrowedBook key={book._id} book={book}></SingleBorrowedBook>)
+                    borrowedBooks.map(book=><SingleBorrowedBook refetch={refetch} key={book._id} book={book}></SingleBorrowedBook>)
                 }
             </div>
         </div>

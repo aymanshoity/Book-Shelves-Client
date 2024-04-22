@@ -1,10 +1,10 @@
-import { BiBookReader } from "react-icons/bi";
-import Swal from "sweetalert2";
-import UseAxiosSecure from "../Hooks/UseAxiosSecure";
-import { FaUserGraduate } from "react-icons/fa";
 
+import UseAxiosSecure from '../Hooks/UseAxiosSecure';
+import Swal from 'sweetalert2';
+import { BiBookReader } from 'react-icons/bi';
+import { FaUserGraduate, FaUserShield, FaUserTag } from 'react-icons/fa';
 
-const SingleReader = ({ reader, index, refetch }) => {
+const ReadersCard = ({ reader, refetch, index }) => {
     const axiosSecure = UseAxiosSecure()
     const handleDeleteReader = (id) => {
         console.log(id)
@@ -67,28 +67,39 @@ const SingleReader = ({ reader, index, refetch }) => {
         });
     }
     return (
-        <tr className="hover:bg-gray-50 border-b transition duration-300">
-            <td className="py-4 px-6 border-b text-xl font-medium">{index + 1}</td>
-            <td className="py-4 px-6 border-b text-xl font-medium">{reader?.name}</td>
-            <td className="py-4 px-4 flex justify-start text-xl font-medium">
-                {reader?.email}
-            </td>
+        <div className="w-[300px] mx-auto my-20 p-6 md:p-8 rounded-lg border shadow-lg border-[#000068] text-[#000068] bg-white">
+            <div className="space-y-6 ">
 
-            <td className="py-4 px-6 border-b ">
-                {
-                    reader?.role === 'librarian' ? <>
-                        <button className="bg-[#000068]  text-white btn text-2xl"><FaUserGraduate /></button>
-                    </> : <>
-                        <button onClick={() => handleMakeLibrarian(reader)} className="bg-[#000068]  text-white btn text-2xl"><BiBookReader /></button>
-                    </>
-                }
-            </td>
-            <td className="py-4 px-6 border-b text-end">
-                <button onClick={() => handleDeleteReader(reader?._id)} className="bg-[#000068]  text-white btn">Delete</button>
-            </td>
-        </tr>
+                <div className="flex flex-row justify-between"><span className="font-bold">Sl No.</span><span className="text-right">{index+1}</span></div>
+                <div className="flex flex-row justify-between"><span className="font-bold">Reader Name</span><span className="text-right">{reader?.name}</span></div>
+                <div className="flex flex-row justify-between"><span className="font-bold">Reader Email</span><span>{reader?.email}</span></div>
+                <div className="flex flex-row justify-between"><span className="font-bold">Role</span><span>
+
+                    {
+                        reader?.role === 'librarian' ? <>
+                            <button className="bg-[#000068]  text-white btn text-2xl"><FaUserGraduate /></button>
+                        </> : <>
+                            <button onClick={() => handleMakeLibrarian(reader)} className="bg-[#000068]  text-white btn text-2xl"><BiBookReader /></button>
+                        </>
+                    }
+                </span></div>
+
+                <div className="flex flex-row justify-between">
+
+                    <span className="font-bold">Action</span>
+                    <span><button onClick={() => handleDeleteReader(reader?._id)} className="bg-[#000068]  text-white btn">Delete</button></span>
+
+                </div>
+        
+
+
+
+
+
+            </div>
+        </div>
 
     );
 };
 
-export default SingleReader;
+export default ReadersCard;

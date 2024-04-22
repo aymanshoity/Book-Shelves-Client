@@ -9,7 +9,10 @@ const LibrarianRoute = ({children}) => {
     const location=useLocation()
     const {user,loading}=useContext(AuthContext)
     if(loading || isLibrarianLoading){
-       return  <div className="w-10 h-10 my-36 animate-[spin_1s_linear_infinite] rounded-full border-4 border-r-sky-900 border-sky-400"></div>
+       return  <div className="flex flex-col items-center justify-center">
+       <div className="w-10 h-10 my-36 animate-[spin_1s_linear_infinite] rounded-full border-4 border-r-white border-[#000068]">
+       </div>
+      </div>
     }
     if(user && isLibrarian){
         return children

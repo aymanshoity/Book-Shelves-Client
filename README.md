@@ -11,6 +11,10 @@
 𝐆𝐢𝐭𝐇𝐮𝐛 𝐒𝐞𝐫𝐯𝐞𝐫 𝐋𝐢𝐧𝐤: https://github.com/aymanshoity/Book-Shelves-Server
 
 
+Librarian Email:johndoe@gmail.com
+Librarian Password:123456@Aa
+
+
 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬:
 1. Application of Firebase Authentication System. User can register and login using Email-Password or Google .
 
